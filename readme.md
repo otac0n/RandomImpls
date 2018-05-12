@@ -1,6 +1,8 @@
 RandomImpls
 =======
 
+Provides a few useful overrides of the System.Random class.
+
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](license.md)
 [![Get it on NuGet](https://img.shields.io/nuget/v/RandomImpls.svg?style=flat-square)](http://nuget.org/packages/RandomImpls)
 
