@@ -3,7 +3,6 @@
 namespace RandomImpls
 {
     using System;
-    using System.Linq;
     using System.Security.Cryptography;
 
     /// <summary>
@@ -16,9 +15,9 @@ namespace RandomImpls
     /// </remarks>
     public class HashAlgorithmRandom : BytesRandom
     {
+        private readonly byte[] counter;
         private readonly HashAlgorithm hashAlgorithm;
         private readonly byte[] key;
-        private readonly byte[] counter;
         private byte[] currentBlock;
         private int currentOffset;
 
@@ -31,8 +30,7 @@ namespace RandomImpls
         public HashAlgorithmRandom(HashAlgorithm hashAlgorithm, byte[] seed = null)
         {
             this.hashAlgorithm = hashAlgorithm ?? throw new ArgumentNullException(nameof(hashAlgorithm));
-            seed = seed == null ? new byte[0] : seed.ToArray();
-            this.key = this.hashAlgorithm.ComputeHash(seed);
+            this.key = this.hashAlgorithm.ComputeHash(seed ?? new byte[0]);
             this.counter = new byte[this.key.Length];
 
             this.currentBlock = this.key;

@@ -22,6 +22,7 @@ namespace RandomImpls
             this.randomNumberGenerator = randomNumberGenerator ?? throw new ArgumentNullException(nameof(randomNumberGenerator));
         }
 
+        /// <inheritdoc />
         public override void NextBytes(byte[] buffer)
         {
             this.randomNumberGenerator.GetBytes(buffer);
