@@ -8,6 +8,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <TargetFrameworks>net35;netcoreapp2.0</TargetFrameworks>
     <Description />
+    <PackageIconUrl>https://raw.github.com/otac0n/RandomImpls/master/Dice.png</PackageIconUrl>
     <PackageLicenseUrl>https://raw.github.com/otac0n/RandomImpls/master/license.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/otac0n/RandomImpls</PackageProjectUrl>
   </PropertyGroup>

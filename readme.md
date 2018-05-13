@@ -10,6 +10,8 @@ Provides a few useful overrides of the System.Random class.
 [![Test Coverage](https://img.shields.io/codecov/c/github/otac0n/RandomImpls.svg?style=flat-square)](https://codecov.io/gh/otac0n/RandomImpls)
 [![Pre-release packages available](https://img.shields.io/nuget/vpre/RandomImpls.svg?style=flat-square)](http://nuget.org/packages/RandomImpls)
 
+[Dice icon by Petai Jantrapoon from the Noun Project](https://thenounproject.com/term/dice/1540257/)
+
 Getting Started
 ---------------
 
