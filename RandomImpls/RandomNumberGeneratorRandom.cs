@@ -23,9 +23,6 @@ namespace RandomImpls
         }
 
         /// <inheritdoc />
-        public override void NextBytes(byte[] buffer)
-        {
-            this.randomNumberGenerator.GetBytes(buffer);
-        }
+        public override void NextBytes(byte[] buffer) => this.randomNumberGenerator.GetBytes(buffer);
     }
 }
