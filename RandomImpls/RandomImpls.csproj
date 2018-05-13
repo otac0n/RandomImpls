@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <TargetFrameworks>net35;netcoreapp2.0</TargetFrameworks>
-    <Description />
+    <Description>Provides a few useful overrides of the System.Random class.</Description>
     <PackageIconUrl>https://raw.github.com/otac0n/RandomImpls/master/Dice.png</PackageIconUrl>
     <PackageLicenseUrl>https://raw.github.com/otac0n/RandomImpls/master/license.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/otac0n/RandomImpls</PackageProjectUrl>
