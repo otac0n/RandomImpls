@@ -1,4 +1,4 @@
-RandomImpls
+﻿RandomImpls
 =======
 
 Provides a few useful overrides of the System.Random class.
@@ -16,3 +16,37 @@ Getting Started
 ---------------
 
     PM> Install-Package RandomImpls
+
+Available Implementations
+-------------------------
+
+* `HashAlgorithmRandom`  
+    Wraps a `System.Security.Cryptography.HashAlgorithm` to provide repeatable randomness based on a seed of arbitrary bytes.  
+    Example:
+    ```
+    using System.Security.Cryptography;
+    
+    byte[] seed = null; // Provide a seed here.
+    HashAlgorithm hash = new SHA256Managed();
+    Random rand = new HashAlgorithmRandom(hash, seed);
+    ```
+* `RandomNumberGeneratorRandom`  
+    Wraps a `System.Security.Cryptography.RandomNumberGenerator` to provide cryptographically secure randomness in an interface that allows interoperating
+    with libraries that use `System.Random`.  
+    Example:
+    ```
+    using System.Security.Cryptography;
+    
+    RandomNumberGenerator  rng = new RNGCryptoServiceProvider();
+    Random rand = new RandomNumberGeneratorRandom(rng);
+    ```
+* `StaticRandom`  
+    Provides static versions of the methods in the `System.Random` class.  Internally this class uses a `[ThreadStatic]` field to segregate threads, and
+    chooses seed values that are not likely to collide when multiple threads are started at the same time.  
+    Example:
+    ```
+    int value = StaticRandom.Next();
+    ```
+* `BytesRandom`  
+    A base class that produces randomness based on an implementation-specific stream of bytes.  See the implementations of `HashAlgorithmRandom` or
+    `RandomNumberGeneratorRandom` for implementation examples.
