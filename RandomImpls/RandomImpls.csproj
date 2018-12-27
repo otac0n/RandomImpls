@@ -11,6 +11,7 @@
     <PackageIconUrl>https://raw.github.com/otac0n/RandomImpls/master/Dice.png</PackageIconUrl>
     <PackageLicenseUrl>https://raw.github.com/otac0n/RandomImpls/master/license.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/otac0n/RandomImpls</PackageProjectUrl>
+    <PackageTags>random;rng;randomnumbergenerator;random number;random number generator</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\stylecop.json" Link="stylecop.json" />
