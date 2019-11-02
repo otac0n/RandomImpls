@@ -19,10 +19,7 @@ namespace RandomImpls
         /// <remarks>
         /// This instance should not be shared accross threads.  Instead, access this property statically.
         /// </remarks>
-        public static Random Instance
-        {
-            get { return instance ?? (instance = new Random(Thread.CurrentThread.ManagedThreadId * 37 + Environment.TickCount)); }
-        }
+        public static Random Instance => instance ?? (instance = new Random(Thread.CurrentThread.ManagedThreadId * 37 + Environment.TickCount));
 
         /// <summary>
         /// Invokes the <see cref="Random.Next()"/> on a static instance of the <see cref="Random"/> class.
@@ -56,5 +53,19 @@ namespace RandomImpls
         /// </summary>
         /// <returns>Returns the random floating-point number returned from the static instance.</returns>
         public static double NextDouble() => Instance.NextDouble();
+
+        /// <summary>
+        /// Returns a random floating point number with the specified normal distribution.
+        /// </summary>
+        /// <param name="mean">The mean value of the distribution.</param>
+        /// <param name="variance">The variance of the distribution.</param>
+        /// <returns>A double precision floating point number from the specified normal distribution.</returns>
+        public static double NextDoubleNormal(double mean, double variance) => Instance.NextDoubleNormal(mean, variance);
+
+        /// <summary>
+        /// Returns a random floating point number with a standard normal distribution.
+        /// </summary>
+        /// <returns>A double precision floating point number from the standard normal distribution.</returns>
+        public static double NextDoubleNormal() => Instance.NextDoubleNormal();
     }
 }
