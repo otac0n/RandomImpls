@@ -1,4 +1,4 @@
-﻿RandomImpls
+﻿RandomImpls <img src="Dice.svg" width="42" height="42" />
 =======
 
 Provides a few useful overrides of the System.Random class.
